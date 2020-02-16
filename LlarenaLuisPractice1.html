@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a new event</title>
+</head>
+<script src="LlarenaLuisPractice1.js"></script>
+<body>
+    <form>
+        <label  for="type" style="font-family: cursive"> Event Type: 
+        <select id="type" name="typelist" form="eventform">
+            <option value="co">Choose one</option>
+            <option value="bd">Birthday Party</option>
+            <option value="se">Seminar</option>
+            <option value="po">Program</option>
+          </select>
+        </label><br><br>
+        <label style="font-family: cursive"> Event Title: <input type="text" size=50 required></label><br><br>
+        <label style="font-family: cursive"> Event Dates: <input type="date" required>  to <input type="date"></label><br><br>
+        <label style="font-family: cursive"> Posting Date: <input type="date" required></label><br><br><br>
+
+
+        <label style="font-family: cursive"> 
+        <input type="checkbox" >Is Registration Required?<br><br>
+
+        <label for="chkOther"><input type="checkbox" id="chkOther" onclick="check2(this)">Is this event associates with any Family Programs?<br></label>
+        <div id="dvOther" style="display: none"><br>
+            Please indicate if any:
+            <input type="text" id="txtOther" />
+        </div><br>
+
+        <input type="checkbox" id="che3">Upon Registration Completion, Are Users to Receive in Auto Generated Email?<br><br>
+
+        <label for="chkPC"><input type="checkbox" id="chkPC" onclick="check4(this)">Is There a Point of Contact?<br></label>
+        <div id="dvPC" style="display: none"><br>
+            If so, please fill up the following:<br>
+            Name:<input type="text" id="txtPC"><br>
+            Contact:<input type="number" id="txtContact">
+        </div><br>
+
+        <label for="chkHCP"><input type="checkbox" id="chkHCP" onclick="check5(this)">Is There a Hosting Command Point of Contact?<br></label>
+        <div id="dvHCP" style="display: none"><br>
+            If so, please fill up the following:<br>
+            Name:<input type="text" id="txtHCP"><br>
+            Contact:<input type="number" id="txtHCPC">
+        </div><br>
+
+
+        <button onclick="Submit()">Submit</button>
+        <input type="reset" name="Cancel">
+    </form>
+</body>
+</html>
